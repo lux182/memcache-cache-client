@@ -1,5 +1,6 @@
 package com.banana.cache;
 
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
@@ -18,4 +19,19 @@ public class TestDao2 {
         System.out.println("没有缓存命中");
         return author;
     }
+
+    @CacheEvict(value = "defaultCache", allEntries = true)
+    public void delete() {
+        System.out.println("清楚所有缓存");
+    }
+    /*@Caching(evict={@CacheEvict(value="defaultCache",allEntries=true)})
+    public void delete(){
+        System.out.println("清楚所有缓存");
+
+    }*/
+
+  /*  @CacheEvict(value="shops:detail",key="'id:'+#p0['id']",condition="#p0['id']>0")
+    public Shop getById(Map<String, Object> param){
+
+    }*/
 }  
