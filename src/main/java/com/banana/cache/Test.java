@@ -15,6 +15,7 @@ public class Test {
     public void x() {
         try {
             System.out.println(testDao2.getUserById(2l) + "------------------------");
+            System.out.println(testDao2.getList("hello"));
         } catch (Exception e) {
             e.printStackTrace();
         }

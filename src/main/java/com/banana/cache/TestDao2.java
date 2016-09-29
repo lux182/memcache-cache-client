@@ -14,6 +14,7 @@ public class TestDao2 {
 
     @Cacheable(value = "defaultCache")
     public String getList(String author) throws Exception {
+        //除第一次外，以后不触发以下的方法
         System.out.println("没有缓存命中");
         return author;
     }
