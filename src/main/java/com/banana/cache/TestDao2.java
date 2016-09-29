@@ -20,10 +20,10 @@ public class TestDao2 {
         return author;
     }
 
-    @CacheEvict(value = "defaultCache", allEntries = true)
+    /*@CacheEvict(value = "defaultCache", allEntries = true)
     public void delete() {
         System.out.println("清楚所有缓存");
-    }
+    }*/
     /*@Caching(evict={@CacheEvict(value="defaultCache",allEntries=true)})
     public void delete(){
         System.out.println("清楚所有缓存");
