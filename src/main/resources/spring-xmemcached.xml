@@ -7,7 +7,7 @@
                 http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <!-- 轻轻的扫描一下 -->
     <context:component-scan base-package="com.banana.cache"/>
-    <cache:annotation-driven/>
+    <cache:annotation-driven />
     <!-- 这里的cacheManager 缓存名字是默认的，要改，就参考我spring+ehcache 的配置改 -->
     <bean name="cacheManager" class="com.google.code.ssm.spring.SSMCacheManager">
         <property name="caches">

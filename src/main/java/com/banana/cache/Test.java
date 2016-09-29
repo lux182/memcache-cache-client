@@ -16,6 +16,7 @@ public class Test {
         try {
             System.out.println(testDao2.getUserById(2l) + "------------------------");
             System.out.println(testDao2.getList("hello"));
+            testDao2.delete();
         } catch (Exception e) {
             e.printStackTrace();
         }
